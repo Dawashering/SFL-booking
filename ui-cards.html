@@ -15,7 +15,7 @@
 
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
@@ -231,14 +231,7 @@
                     <div class="col-4">
                         <h1>Carpentary Lab</h1>
                     </div>
-                    <!-- <div class="col-4">
-                        <label>Select Date: </label>
-                        <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
-                            <input class="form-control" type="text" readonly />
-                            <span class="input-group-addon "><i class="fa fa-calendar"></i></span>
-
-                        </div>
-                    </div> -->
+                    
 
 
                     <!-- JQYERY DATEPICKER -->
@@ -445,7 +438,20 @@
                 </div>
             </div><!-- .animated -->
         </div><!-- .content -->
+<div class="modal" >
+	    <div class="modal-box">
+	        <!-- <span class="close-button">X</span> -->
+	        <h6>Do you want to book </h6>
+	        
+			<div >
+				<input type="text" value="num" name="equipmentName" disabled="" style="background-color: #B4DFE0; border: none; width: 30%; padding-left: 3px; color: black;"> on
+				<input type="text"  name="timeValue" disabled="" style="background-color: #B4DFE0; border: none; width: 35%; padding-left: 3px; color: black;">
 
+			</div>
+	        <button class="btn-yes" style=" border-radius: 10px; background-color: #03E08B; width: 15%; float: left; border: none; color: black">Yes </button>
+  			<button class="btn-no" style=" border-radius: 10px; background-color: #DA452D; width: 15%; float: right; border: none; color: black">No</button>
+	 	</div>
+	</div>
 
     </div><!-- /#right-panel -->
 
