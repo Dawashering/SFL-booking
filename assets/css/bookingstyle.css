@@ -1,72 +1,47 @@
-#table, td, th{
-    border-collapse: collapse;
-    font-size: 9px;
-    border: 2px solid;
-  }
-  .bookbtn:hover{
-    background-color:lightgreen;
-    cursor: pointer;
-  }
-  .bookbtn{
-      width: 100%;
-      height: 36px;
-      border: 0px;
-      margin: 0px;
-      background-color: #d9d9d9;
-  }
-  .ticCell {
-      border: 2px solid black;
-  }
-  
-  .titelCell {
-      border-right: solid;
-      border-width: 2px;
-      width: 120px;
-      height: 40px;
-  }
-  
-  .dayCell {
-      border-bottom: solid;
-      border-width: 2px;
-      width: 120px;
-      height: 40px;
-  }
+.modal {
+						  position: fixed;
+						  left: 0;
+						  top: 0;
+						  width: 100%;
+						  height: 100%;
+						  background-color: rgba(0, 0, 0, 0.6);
+						  opacity: .5;
+						  visibility: hidden;
+						  
+						}
+						.modal-box {
+						  position: absolute;
+						  top: 50%;
+						  left: 50%;
+						  transform: translate(-50%, -50%);
+						  background-color: #B4DFE0;
+						  padding: 1rem 1.5rem;
+						  width: 24rem;
+						  border-radius: 0.5rem;
+						  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+						}
+						
+						.show-modal {
+						  opacity: 1;
+						  visibility: visible;
+						  transform: scale(1.0);
+						}
+						.btn-red {
+							background-color: #DD5742;
+						}
+						table {
+							margin: 5% auto;
+							border: 2px solid black;
+						}
+						td, th{
+							padding: 5px;
+							border: 2px solid black;
 
-
-
-
-  /*for search button*/
-  * {
-  box-sizing: border-box;
-}
-
-form.search input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 60%;
-  background: #f1f1f1;
-}
-
-form.search button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: gray;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-}
-
-form.search button:hover {
-  background: lightgray;
-}
-
-form.search::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+						}
+						td.pointer {
+					        cursor: pointer;
+					    }
+					    td:hover {
+					        background-color:#94F580;
+					      
+						}
