@@ -30,10 +30,14 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
 
+<!-- JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 </head>
 
 <body>
+
     <!-- Left Panel -->
 
     <aside id="left-panel" class="left-panel" style="background-color: #196767;">
@@ -55,44 +59,44 @@
                     <h3 class="menu-title">Laboratory Labs</h3><!-- /.menu-title -->
                     <li class="active">
                         <a href="ui-cards.html"> <i class="menu-icon fa fa-laptop"></i>Carpentary Lab</a>
-                        
+
                     </li>
                     <li >
                         <a href="ui-cards.html"> <i class="menu-icon fa fa-laptop"></i>Metal Fabrication Lab</a>
-                        
+
                     </li>
                     <li >
                         <a href="ui-cards.html"> <i class="menu-icon fa fa-laptop"></i>3D printing & Scanning</a>
-                        
+
                     </li>
                     <li >
                         <a href="ui-cards.html"> <i class="menu-icon fa fa-laptop"></i>Electronic Lab</a>
-                        
+
                     </li>
                     <li >
                         <a href="ui-cards.html"> <i class="menu-icon fa fa-laptop"></i>Heavy Machinry Lab</a>
-                        
+
                     </li>
                     <li >
                         <a href="ui-cards.html"> <i class="menu-icon fa fa-laptop"></i>Hand Tools</a>
-                        
+
                     </li>
-                   
+
 
                     <h3 class="menu-title">Explore more</h3><!-- /.menu-title -->
                     <li >
                         <a href="ui-cards.html"> <i class="menu-icon fa fa-glass"></i>Carpentary Lab</a>
-                        
+
                     </li>
                     <li >
                         <a href="ui-cards.html"> <i class="menu-icon fa fa-glass"></i>Metal Fabrication Lab</a>
-                        
+
                     </li>
                     <li >
                         <a href="ui-cards.html"> <i class="menu-icon fa fa fa-glass"></i>3D printing & Scanning</a>
-                        
+
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -114,7 +118,7 @@
                     <div class="header-left">
                         <div class="dropdown col-md-3 col-sm-3 offset-1">
                             <li class="menu-item-has-children active dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i></i>Completed</a>
                                 <ul class="sub-menu children dropdown-menu">
                                     <li><a href="ui-buttons.html">Buttons</a></li>
@@ -131,7 +135,7 @@
 
                         <div class="dropdown col-md-3 col-sm-4 offset-1">
                             <li class="menu-item-has-children active dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i></i>Progress</a>
                                 <ul class="sub-menu children dropdown-menu">
                                     <li><a href="ui-buttons.html">Buttons</a></li>
@@ -144,7 +148,7 @@
 
                         <div class="dropdown col-md-3 col-sm-4">
                             <li class="menu-item-has-children active dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i></i>Explore</a>
                                 <ul class="sub-menu children dropdown-menu">
                                     <li><a href="ui-cards.html">Cards</a></li>
@@ -179,7 +183,7 @@
                             <i class="flag-icon flag-icon-us"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="language">
-                           
+
                             <div class="dropdown-item">
                                 <i class="flag-icon flag-icon-us"></i>
                             </div>
@@ -227,14 +231,39 @@
                     <div class="col-4">
                         <h1>Carpentary Lab</h1>
                     </div>
-                    <div class="col-4">
+                    <!-- <div class="col-4">
                         <label>Select Date: </label>
                         <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
                             <input class="form-control" type="text" readonly />
                             <span class="input-group-addon "><i class="fa fa-calendar"></i></span>
-                            
+
                         </div>
-                    </div>
+                    </div> -->
+
+
+                    <!-- JQYERY DATEPICKER -->
+                    <p>select date:<input type="date" id="dateControl"/></p>
+
+                    <script>
+                    $(document).ready(function(){
+
+                      var dtToday = new Date();
+
+                      var month = dtToday.getMonth() + 1;
+                      var day = dtToday.getDate();
+                        var year = dtToday.getFullYear();
+                        if(month < 10)
+                          month = '0' + month.toString();
+                        if(day < 10)
+                          day = '0' + day.toString();
+
+                        var maxDate = year + '-' + month + '-' +day;
+
+                        $('#dateControl').attr('min',maxDate);
+                        })
+                    </script>
+
+
                 </div>
                 <div class="lightbox">
 				    <div class="popup-container">
@@ -255,8 +284,8 @@
                                 <input type="text" name="" value="11:00-11:30 AM" id="colu5" hidden>
                                 <input type="text" name="" value="11:30-12:00 PM" id="colu6" hidden>
                                 <input type="text" name="" value="12:00-12:30 PM" id="colu07" hidden>
-                                <input type="text" name="" value="12:30-01:00 PM" id="colu07" hidden> 
-                                <input type="text" name="" value="12:30-01:00 PM" id="colu07" hidden>                
+                                <input type="text" name="" value="12:30-01:00 PM" id="colu07" hidden>
+                                <input type="text" name="" value="12:30-01:00 PM" id="colu07" hidden>
                                 <input type="text" name="" value="Lunch break. Try again!!!" id="colu7" hidden>
                                 <input type="text" name="" value="01:30-02:00 PM" id="colu8" hidden>
                                 <input type="text" name="" value="02:00-02:30 PM" id="colu9" hidden>
@@ -321,7 +350,7 @@
                                 <td class="ticCell" id="211" ><input type="button" onclick="Row2_btn12()" class="bookbtn" id="row-2-btn12" /></td>
                                 <td class="ticCell" id="212" ><input type="button" onclick="Row2_btn13()" class="bookbtn" id="row-2-btn13" /></td>
                                 <td class="ticCell" id="213" ><input type="button" onclick="Row2_btn14()" class="bookbtn" id="row-2-btn14" /></td>
-                                
+
                             </tr>
                             <tr>
                                 <input id="row3" type="text" name="" value="Equipment 3" hidden>
@@ -378,7 +407,7 @@
                                 <td class="ticCell" id="511" ><input type="button" onclick="Row5_btn12()" class="bookbtn" id="row-5-btn12" /></td>
                                 <td class="ticCell" id="512" ><input type="button" onclick="Row5_btn13()" class="bookbtn" id="row-5-btn13" /></td>
                                 <td class="ticCell" id="513" ><input type="button" onclick="Row5_btn14()" class="bookbtn" id="row-5-btn14" /></td>
-                              
+
                             </tr>
                             <tr>
                                 <input id="row6" type="text" name="" value="Equipment 6" hidden>
@@ -419,11 +448,11 @@
                     </table>
                 </div><!-- .tablediv-->
 
-                
+
 
                 <div class="yourDivClass row-md-9 offset-md-3" >
                     <div id="myDiv">
-                         
+
                     </div>
                 </div>
             </div><!-- .animated -->
@@ -433,7 +462,7 @@
     </div><!-- /#right-panel -->
 
     <!-- Right Panel -->
-  
+
 <script >
 	(function ($) {
     $('.bookbtn').on('click', function(){
@@ -445,7 +474,7 @@
             $('.lightbox').fadeOut(200);
         }
     });
-  
+
     $('.close-btn').on('click', function(){
         $('.lightbox').fadeOut(200);
     });
